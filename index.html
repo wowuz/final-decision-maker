@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Decision Maker</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div id="app" class="app-content">
+      <div class="scene">
+        <div class="cube">
+          <div class="cube__face cube__face--1">1</div>
+          <div class="cube__face cube__face--2">2</div>
+          <div class="cube__face cube__face--3">3</div>
+          <div class="cube__face cube__face--4">4</div>
+          <div class="cube__face cube__face--5">5</div>
+          <div class="cube__face cube__face--6">6</div>
+        </div>
+        <div class="coin hidden">
+          <div class="coin__face coin__face--heads">Heads</div>
+          <div class="coin__face coin__face--tails">Tails</div>
+        </div>
+      </div>
+      <div id="resultTitle" class="result-title"></div>
+      <button id="rollBtn">Roll Dice</button>
+    </div>
+
+    <!-- Sidebar Settings -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Settings</h2>
+      </div>
+
+      <div class="settings-section">
+        <h3>Presets</h3>
+        <div class="preset-controls">
+          <select id="presetSelect">
+            <option value="">-- Select Preset --</option>
+          </select>
+          <button id="loadPresetBtn">Load</button>
+          <button id="deletePresetBtn" class="danger-btn">Delete</button>
+        </div>
+        <div class="preset-save">
+          <input type="text" id="newPresetName" placeholder="New Preset Name">
+          <button id="savePresetBtn">Save New</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h3>Configuration</h3>
+        <div class="config-group">
+          <label for="sidesInput">Number of Sides:</label>
+          <input type="number" id="sidesInput" value="6" min="2" max="1000">
+        </div>
+      </div>
+
+      <div class="settings-section titles-section">
+        <h3>Side Titles</h3>
+        <div id="titlesContainer" class="titles-container">
+          <!-- Inputs generated here -->
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button id="applySettingsBtn" class="primary-btn">Update Settings</button>
+        <button id="clearCacheBtn" class="danger-btn">Clear Cache & Reset</button>
+      </div>
+    </aside>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
